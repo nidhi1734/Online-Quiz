@@ -1,0 +1,174 @@
+<html>
+    <style>
+        div
+        {
+            background : white;
+        }
+        span
+        {
+        	color:grey;
+            line-height:1.5;
+        }
+        </style>
+<body>
+<body>
+<div style="background-color:grey;height:500px;">
+ <h1 id="h" align="center" style="margin-top:-7px;height:40px;color:white;background-color:black">Quiz</h1>
+        <div style="margin-top:30px;margin-left:30px;margin-right:30px;border-radius:5px;height:300px">
+            <h3 id="qu" style="margin-left:5px"> Which type of JavaScript language is ___</h3>
+            <input type="radio" name="ques" value="Object-Oriented"><span>Object-Oriented</span><br>
+            <input type="radio" name="ques" value="Object-Based"><span>Object-Based</span><br>
+            <input type="radio" name="ques" value="Assembly-language"><span>Assembly-language</span><br>
+            <input type="radio" name="ques" value="High-level"><span>High-level</span><br><br>
+            <div id="pr" style="margin-left:10px"></div>
+            <input type="button" id="q" value="Submit" onclick="ab()" style="height:30px;width:60px;background-color:yellow;border-radius:5px;margin:10px">
+           <br> <input type="button" id="q1" value="Next" onclick="abc()" style="height:30px;width:60px;background-color:green;border-radius:5px;margin:1
+		   0px;display:none;color:white;">
+            
+        </div></div>
+        </body>
+    <script>
+        var no=0;
+        const info = 
+        {
+            q :[
+                {
+                state:"Which type of JavaScript language is ___",
+                options:["Object-Oriented","Object-Based","Assembly-language","High-level"],
+                answer:"Object-Based"
+                },
+                {
+                state:"Full form of css",
+                options:["Java","JavaScript","JQuery","None of these"],
+                answer:"None of these"
+                },
+                {
+                state:"Output of '2' + 1",
+                options:[21,3,2,"None of these"],
+                answer:"21"
+                },
+                {
+                state:"Which one of the following is an ternary operator:",
+                options:["?",":","-","+"],
+                answer:"?"
+                },
+                {
+                state:"The 'function' and ' var' are known as:",
+                options:["Keywords","Data types","Declaration statements","Prototypes"],
+                answer:"Declaration statements"
+                },
+                {
+                state:"When interpreter encounters an empty statements, what it will do:",
+                options:["Shows a warning","Prompts to complete the statement","Throws an error","Ignores the statements"],
+                answer:"Ignores the statements"
+                },
+                {
+                state:"Which one of the following is not a keyword:",
+                options:["if","with","debugger","use strict"],
+                answer:"use strict"
+                },
+                {
+                state:"Which of the following type of a variable is volatile?",
+                options:["Mutable variable","Dynamic variable","Volatile variable","None of these"],
+                answer:"Mutable variable"
+                },
+                {
+                state:" Which of the following option is used as hexadecimal literal beginning?",
+                options:["00","0x","0X","Both 0x and 0X"],
+                answer:"Both 0x and 0X"
+                },
+                {
+                state:"When there is an indefinite or an infinite value during an arithmetic computation in a program, then JavaScript prints______",
+                options:["Prints an exception error","Prints an overflow error","Displays Infinity","Prints the value as such"],
+                answer:"Displays Infinity"
+                }
+            ]            
+        }
+        function x()
+        {
+			no=0;
+			abc();
+			//document.write("kidda");
+        }
+        function sub(a)
+        {
+            var x = document.getElementById("h");
+            x.innerHTML="Your Score : " + a;
+			document.write("<h1 align = 'center' style='background-color:black;color:white;padding:5px;height:40px;margin:0px'>Score : "+a+"</h1><div style='background-color:lightgrey;margin-top:-22px;height:500px'><h3 style='margin-left:30px;padding:5px'>Answer Key</h3><div style='background-color:white;padding:2px;margin-left:30px;margin-right:30px;margin-top:-10px;border-radius:7px';><ul type='disc' style='line-height:1.8;'><li> Which type of JavaScript language is - <span style='background-color:green;color:white;border-radius:5px;padding:5px'>Object-Based</span></li><li>Full form of css - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>None of these</span></li><li>Output of '2' + 1 - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>21</span></li><li>Which one of the following is an ternary operator - <span style='background-color:green;color:white;padding:5px;color:white;border-radius:5px'>?</span></li><li>The 'function' and ' var' are known as - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>Declaration statements</span></li><li>When interpreter encounters an empty statements, what it will do - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>Ignores the statements</span></li><li>Which one of the following is not a keyword: - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>use strict</span></li><li>Whichof the following type of a variable is volatile? - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>Mutable variable</span></li><li>Which of the following option is used as hexadecimal literal beginning? - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>Both 0x and 0X</span></li><li>When there is an indefinite or an infinite value during an arithmetic computation in a program, then JavaScript prints - <span style='background-color:green;color:white;padding:5px;border-radius:5px'>Displays Infinity</span></li></ol></div><a href='file:///E:/Web-Tech/quiz.html'><input type='button' value='Restart' onclick='x()' style='margin-left:30px;background-color:blue;color:white;padding:6px;margin:5px;margin-left:30px;border-radius:7px'></a></div>");        
+		}var count=0;
+        function ab()
+        {
+            var i;
+            
+            var s = document.getElementsByName("ques");
+            var v="";
+            
+            for( i=0;i<s.length;i++)
+            {
+                if(s[i].checked)
+                {
+                    v = s[i].value;
+                    s[i].checked = false;
+                }
+                s[i].disabled = true;
+            }
+            //no++;
+			var t = document.getElementById("pr");
+			t.style.height = "20px";
+			t.style.width = "65px";
+			t.style.borderRadius="7px";
+			t.style.padding="10px";
+			t.style.align = "center";
+            if(v=="")
+            {
+            alert("Please select a option");
+            abc();
+            no--;
+            }
+            else if(info.q[no].answer==v)
+            {
+				t.style.backgroundColor = "lightblue";
+				t.style.color= "green";
+                t.innerHTML="Correct";
+                count++;
+            }
+            else
+			{
+				t.style.backgroundColor = "pink";
+				t.style.color= "red";
+                t.innerHTML="Incorrect";
+			}
+            
+            no++;
+            if(no===10)
+            {
+                sub(count);
+                return;
+            }
+			document.getElementById("q").style.display="none";
+			document.getElementById("q1").style.display="block";
+			document.getElementById("q1").style.margin="15px";
+        }
+        function abc()
+        {
+            var x = document.getElementById("qu");
+            x.innerHTML=info.q[no].state;
+            var p = document.getElementsByTagName("span");
+            var q = document.getElementsByName("ques");
+            for(var i=0;i<p.length;i++)
+            {
+                p[i].innerHTML = info.q[no].options[i];
+                q[i].value = info.q[no].options[i];
+                q[i].disabled = false;
+            }
+			var t =document.getElementById("pr");
+			t.style.height = "0px";
+			t.style.width = "0px";
+			t.style.padding="0px";
+			document.getElementById("pr").innerHTML = "";
+			document.getElementById("q1").style.display="none";
+			document.getElementById("q").style.display="block";
+        }
+        /*Answers-> Object-Based, None of these, 21, ?, Declaration statements, Ignores the statements, use strict, Both 0x and 0X, Displays Infinity*/
+        </script>
+    </html>
